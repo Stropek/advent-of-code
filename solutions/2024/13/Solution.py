@@ -1,6 +1,6 @@
 import sys
 
-import HelperMethods as hm
+import common.HelperMethods as hm
 import regex as re
 from decimal import Decimal
 from collections import Counter
