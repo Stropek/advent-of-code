@@ -1,0 +1,5 @@
+current minimum correct value: 
+109685330781408
+
+can start from: 
+87896562000000
