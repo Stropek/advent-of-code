@@ -1,0 +1,25 @@
+ggrbbwbbwbuguwbuguwbbuwrbbbrwgurgwggbbwbguurb           - possible
+gruurruwgbwwrbbggwuwrwugwrguuwwrurugbbgubrurubrgwubg    - impossible
+wguwwgbbggbbrbwurguububrwgbubwbwwuwgrgbuwgubg           - impossible
+
+
+913470 - too low
+
+
+Design 1: ggrbbwbbwbuguwbuguwbbuwrbbbrwgurgwggbbwbguurb
+-- POSSIBLE in 3968 iterations: _gg_r_bbwb_b_wb_uguw_bu_gu_w_bb_uw_r_bbb_rwgur_gwgg_bbwb_guu_rb
+-- POSSIBLE in 4864 iterations: _gg_rbb_w_b_bwb_ugu_w_bugu_wb_b_uw_rbb_brwg_urg_wgg_bbw_bgu_urb
+-- POSSIBLE in 6873 iterations: _gg_rbb_w_b_bwb_uguw_b_uguw_bbu_wrb_bb_rwgur_gwgg_bb_wbg_uur_b
+Total possible so far:  22898
+
+Design 2: uubwgrwrwrruwrwggggwwrbgbbwgwwbwguwbrrwrgugbrbwrurggb
+-- POSSIBLE in 11445 iterations: _u_ub_w_grw_rw_r_ru_wr_wgg_ggw_wrb_gb_bw_gww_bwg_uwb_rrw_rg_u_gb_rbw_rur_ggb
+-- POSSIBLE in 11477 iterations: _u_ub_w_grw_rw_r_ru_wr_wgg_ggw_wrb_gb_bw_gww_bwg_uwb_rrw_r_gugbr_bwr_urg_gb
+Total possible so far:  1652885
+
+Design 3: rgruubburgubugugbwuguwururrbbgwuurwwbugburgrbbgbbgugwgbgg
+-- POSSIBLE in 13059 iterations: _rg_r_uub_bu_rg_u_bugu_gbw_uguw_uru_rr_bbg_wuu_rww_b_ugbu_rg_r_b_b_gbbg_ug_wg_bgg
+-- POSSIBLE in 13071 iterations: _r_gr_u_u_bbur_gubu_gug_b_wu_guw_uru_rr_b_bgwuu_rw_wbu_gb_ur_grbb_gbb_gug_wgb_gg
+
+
+621820080273474 - the answer
