@@ -1,0 +1,36 @@
+1488 - too high
+940 - ?
+542 - ?
+444 - too high
+
+ABCD - 1488
+ABDC - 2508
+ACBD - 1028
+ACDB - 1488
+ADBC - 1754
+ADCB - 2120
+
+BACD - 724
+BADC - 1074
+BCAD - 724
+BCDA - moves: 444   iterations: 128404
+BDAC - 1026
+BDCA - moves: 544   iterations: 241679
+
+CABD - 792
+CADB - 1344
+CBAD - 1120
+CBDA - 536
+CDAB - 542
+CDBA - 768
+
+DABC - 940
+DACB - 800
+DBAC - 2034
+DBCA - 830
+DCAB - 504
+DCBA - 1056
+
+334 - correct answer
+
+20,12 // byte 2914 - correct answer
