@@ -1,5 +1,13 @@
-current minimum correct value: 
-109685330781408
+first with 6 same digits and 16 overall: 70368747168992
 
-can start from: 
-87896562000000
+
+current minimum correct value: 
+109685330781408 - correct answer
+109685334975712 - wrong answer / too high
+109685364335840
+
+2,4,1,7,7,5
+4,1,1,4
+5,5,0,3,3,0
+
+109685330781408 [2, 4, 1, 7, 7, 5, 4, 1, 1, 4, 5, 5, 0, 3, 3, 0] 4194304
