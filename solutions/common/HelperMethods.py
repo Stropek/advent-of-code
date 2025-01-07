@@ -1,9 +1,32 @@
 import sys
+import os
+
+BLACK = '\033[30m'
+RED = '\033[31m'
+GREEN = '\033[32m'
+YELLOW = '\033[33m'
+BLUE = '\033[34m'
+MAGENTA = '\033[35m'
+CYAN = '\033[36m'
+LIGHT_GRAY = '\033[37m'
+DARK_GRAY = '\033[90m'
+BRIGHT_RED = '\033[91m'
+BRIGHT_GREEN = '\033[92m'
+BRIGHT_YELLOW = '\033[93m'
+BRIGHT_BLUE = '\033[94m'
+BRIGHT_MAGENTA = '\033[95m'
+BRIGHT_CYAN = '\033[96m'
+WHITE = '\033[97m'
+
+RESET = '\033[0m' # called to return to standard terminal text color
+
 
 def readVal(parse, in_stream):
     return parse(in_stream.readline().strip("\n").split(' ')[0])
 def readValsMap(parse, in_stream):
     return map(parse, in_stream.readline().strip("\n").split(' '))
+def readValsTuple(parse, in_stream, separator=' '):
+    return tuple(map(parse, in_stream.readline().strip("\n").split(separator)))
 def readValsList(parse, in_stream, separator): 
     line = in_stream.readline().strip("\n").split(separator)
     
@@ -50,11 +73,19 @@ def readStrMatrix(in_stream, display=False):
     lines = []
     line = in_stream.readline().strip("\n")
     
+    j = 0
     while len(line) > 0:
         if display:
             print(line)
-        lines += [line]
+        lines.append([])
         
+        lines[j] = [''] * len(line)        
+        i = 0
+        for lc in line:
+            lines[j][i] = lc
+            i += 1
+        
+        j += 1
         line = in_stream.readline().strip("\n")
     
     return lines
@@ -71,6 +102,22 @@ def write_line(out, text):
     else: 
         out.write(str(text) + "\n")
         
-def display_matrix(matrix):
-    for j in range(len(matrix)):
-        print(''.join(matrix[j]))
+def display_matrix(matrix, coloured=False):
+    # os.system('cls||clear')
+    
+    if coloured:
+        for j in range(len(matrix)):
+            line = ''.join(matrix[j]).replace('O', GREEN + 'O' + RESET)
+            line = line.replace('#', DARK_GRAY + '#' + RESET)
+            line = line.replace('W', BRIGHT_RED + 'W' + RESET)
+            line = line.replace('S', BRIGHT_GREEN + 'S' + RESET)
+            line = line.replace('E', BRIGHT_BLUE + 'E' + RESET)
+            line = line.replace('1', MAGENTA + '1' + RESET)
+            # line = line.replace('>', MAGENTA + '>' + RESET)
+            # line = line.replace('<', MAGENTA + '<' + RESET)
+            # line = line.replace('v', MAGENTA + 'v' + RESET)
+            # line = line.replace('^', MAGENTA + '^' + RESET)
+            print(line)
+    else:
+        for j in range(len(matrix)):
+            print(''.join(matrix[j]))
