@@ -8,6 +8,7 @@ from solutions.common import HelperMethods as hm
 import regex as re
 from collections import Counter
 import math
+import hashlib
 
 
 def solve_1(in_file_stream):
