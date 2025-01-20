@@ -18,15 +18,7 @@ def solve_1(in_file_stream):
     print("End!\n")
 
 
-def solve_2(in_file_stream):
-    print("Solving!\n")
-    total = 0
-
-    print("End!\n")
-
-
 if __name__ == "__main__":
 
     in_file_stream = open("in.txt", "r")
     solve_1(in_file_stream)
-    # solve_2(in_file_stream)
