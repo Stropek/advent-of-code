@@ -11,9 +11,36 @@ import math
 import hashlib
 
 
-def solve_1(in_file_stream):
+def solve_1(jumps):
     print("Solving!\n")
-    total = 0
+    steps = 0
+
+    i = 0
+
+    while i > -1 and i < len(jumps):
+        jump = jumps[i]
+        jumps[i] += 1
+        i += jump
+        steps += 1
+
+    print(steps)
+
+    print("End!\n")
+
+
+def solve_2(jumps):
+    print("Solving!\n")
+    steps = 0
+
+    i = 0
+
+    while i > -1 and i < len(jumps):
+        jump = jumps[i]
+        jumps[i] += -1 if jump > 2 else 1
+        i += jump
+        steps += 1
+
+    print(steps)
 
     print("End!\n")
 
@@ -21,4 +48,13 @@ def solve_1(in_file_stream):
 if __name__ == "__main__":
 
     in_file_stream = open("in.txt", "r")
-    solve_1(in_file_stream)
+
+    jumps = [None] * 1090
+    j = 0
+
+    for l in in_file_stream:
+        jumps[j] = int(l.strip("\n"))
+        j += 1
+
+    # solve_1(jumps)
+    solve_2(jumps)
