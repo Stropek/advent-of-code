@@ -1,3 +1,4 @@
 nose_parameterized==0.6.0
+regex==2025.11.3
 requests==2.27.1
 path==17
