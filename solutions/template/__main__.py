@@ -12,17 +12,17 @@ import hashlib
 
 
 def solve_1(in_file_stream):
-    print("Solving!\n")
+    print("Solving 1!\n")
     total = 0
 
-    print("End!\n")
+    print("\nEnd!\n")
 
 
 def solve_2(in_file_stream):
-    print("Solving!\n")
+    print("Solving 2!\n")
     total = 0
 
-    print("End!\n")
+    print("\nEnd!\n")
 
 
 if __name__ == "__main__":
