@@ -41,13 +41,10 @@ def readValsList(parse, in_stream, separator):
     return list(map(parse, line))
 
 
-def readValMatrix(parse, in_stream, separator, display):
+def readValMatrix(parse, in_stream, separator="", display=True):
     lines = []
 
-    if separator != "":
-        line = in_stream.readline().strip("\n").split(separator)
-    else:
-        line = in_stream.readline().strip("\n")
+    line = in_stream.readline().strip("\n").split(separator) if separator != "" else in_stream.readline().strip("\n")
 
     while len(line) > 0:
 
@@ -61,10 +58,7 @@ def readValMatrix(parse, in_stream, separator, display):
 
         lines.append(line)
 
-        if separator != "":
-            line = in_stream.readline().strip("\n").split(separator)
-        else:
-            line = in_stream.readline().strip("\n")
+        line = in_stream.readline().strip("\n").split(separator) if separator != "" else in_stream.readline().strip("\n")
 
     return lines
 
