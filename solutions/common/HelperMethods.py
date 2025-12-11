@@ -44,7 +44,11 @@ def readValsList(parse, in_stream, separator):
 def readValMatrix(parse, in_stream, separator="", display=True):
     lines = []
 
-    line = in_stream.readline().strip("\n").split(separator) if separator != "" else in_stream.readline().strip("\n")
+    line = (
+        in_stream.readline().strip("\n").split(separator)
+        if separator != ""
+        else in_stream.readline().strip("\n")
+    )
 
     while len(line) > 0:
 
@@ -58,7 +62,11 @@ def readValMatrix(parse, in_stream, separator="", display=True):
 
         lines.append(line)
 
-        line = in_stream.readline().strip("\n").split(separator) if separator != "" else in_stream.readline().strip("\n")
+        line = (
+            in_stream.readline().strip("\n").split(separator)
+            if separator != ""
+            else in_stream.readline().strip("\n")
+        )
 
     return lines
 
@@ -121,15 +129,18 @@ def display_matrix(matrix, coloured=False):
     if coloured:
         for j in range(len(matrix)):
             line = "".join(matrix[j]).replace("O", GREEN + "O" + RESET)
-            line = line.replace("#", DARK_GRAY + "#" + RESET)
-            line = line.replace("W", BRIGHT_RED + "W" + RESET)
-            line = line.replace("S", BRIGHT_GREEN + "S" + RESET)
-            line = line.replace("E", BRIGHT_BLUE + "E" + RESET)
-            line = line.replace("1", MAGENTA + "1" + RESET)
+            # line = line.replace("#", DARK_GRAY + "#" + RESET)
+            # line = line.replace("W", BRIGHT_RED + "W" + RESET)
+            # line = line.replace("S", BRIGHT_GREEN + "S" + RESET)
+            # line = line.replace("E", BRIGHT_BLUE + "E" + RESET)
+            # line = line.replace("1", MAGENTA + "1" + RESET)
             # line = line.replace('>', MAGENTA + '>' + RESET)
             # line = line.replace('<', MAGENTA + '<' + RESET)
             # line = line.replace('v', MAGENTA + 'v' + RESET)
             # line = line.replace('^', MAGENTA + '^' + RESET)
+            line = line.replace("#", BRIGHT_RED + "#" + RESET)
+            line = line.replace("X", BRIGHT_GREEN + "X" + RESET)
+            line = line.replace("-", BRIGHT_BLUE + "-" + RESET)
             print(line)
     else:
         for j in range(len(matrix)):

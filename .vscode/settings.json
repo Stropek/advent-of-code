@@ -8,5 +8,6 @@
         "test*.py"
     ],
     "python.testing.nosetestsEnabled": false,
-    "python.testing.unittestEnabled": true
+    "python.testing.unittestEnabled": true,
+    "editor.defaultFormatter": null
 }
