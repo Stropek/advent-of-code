@@ -143,5 +143,5 @@ if __name__ == "__main__":
 
     input = prep_input(in_file_stream)
 
-    solve_1(input)
+    # solve_1(input)
     solve_2(input)
